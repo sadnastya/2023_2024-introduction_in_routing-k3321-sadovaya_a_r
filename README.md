@@ -1,4 +1,4 @@
-# Лабороторные работы по курсу: Introduction in routing
+# Лабораторные работы по курсу: Introduction in routing
 
 Выполнила: Садовая Анастасия
 
