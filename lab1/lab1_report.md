@@ -150,8 +150,11 @@ add disabled=no interface=bridge20
 /system identity
 set name=SW02.L3.02.TEST
 ```
-
-3. И для проверки работы dhcp-сервера и локальной связности сети ниже представлены результаты команды ip neighbor print и пинги для различных устройств:
+3. Схема настроенной сети:
+   
+   ![схема_сети](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab1/images/schema.png)
+   
+4. И для проверки работы dhcp-сервера и локальной связности сети ниже представлены результаты команды ip neighbor print и пинги для различных устройств:
 
 **R01**
 ![ip neighbor print](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab1/images/neighbors_router.png)
