@@ -1,0 +1,41 @@
+
+name: lab-2
+
+mgmt:
+  network: static
+  ipv4-subnet: 192.168.100.0/24
+
+topology:
+  nodes:
+    R01.MSK:
+      kind: vr-mikrotik_ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt-ipv4: 192.168.100.10
+    R02.BRL:
+      kind: vr-mikrotik_ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt-ipv4: 192.168.100.20
+    R03.FRT:
+      kind: vr-mikrotik_ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt-ipv4: 192.168.100.30
+    PC1:
+      kind: linux
+      image: alpine:latest
+      mgmt-ipv4: 192.168.100.40
+    PC2:
+      kind: linux
+      image: alpine:latest
+      mgmt-ipv4: 192.168.100.50
+    PC3:
+      kind: linux
+      image: alpine:latest
+      mgmt-ipv4: 192.168.100.60
+
+  links:
+      - endpoints: ["R01.MSK:eth2", "R02.BRL:eth2"]
+      - endpoints: ["R01.MSK:eth3", "R03.FRT:eth3"]
+      - endpoints: ["R01.MSK:eth4", "PC1:eth2"]
+      - endpoints: ["R02.BRL:eth3", "R03.FRT:eth2"]
+      - endpoints: ["R02.BRL:eth4", "PC2:eth4"]
+      - endpoints: ["R03.FRT:eth4", "PC3:eth2"]
