@@ -1,21 +1,31 @@
 
-University: [ITMO University](https://itmo.ru/ru/)
+University: [ITMO University](https://itmo.ru/ru/)'
+
 Faculty: [FICT](https://fict.itmo.ru)
+
 Course: [Introduction in routing](https://github.com/itmo-ict-faculty/introduction-in-routing)
+
 Year: 2024/2025
+
 Group: K3321
+
 Author: Sadovaya Anastasia Romanovna
+
 Lab: Lab1
+
 Date of create: 25.10.2024
+
 Date of finished: 09.11.2024
 
 # Лабораторная работ №2 "Эмуляция распределенной корпоративной сети связи, настройка статической маршрутизации между филиалами"
 
 
 ## Цель:
+
 Ознакомиться с принципами планирования IP адресов, настройке статической маршрутизации и сетевыми функциями устройств.
 
 ## Ход работы:
+
 1. Был написан файл lab2.clab.yaml, описывающий все узлы и соединения между ними через mgmt сеть:
 
 ```
@@ -63,6 +73,7 @@ topology:
 2. Далее необходимо было подключиться к сетевым устройства через ssh(ssh admin@xx.xx.xx.xx) и прописать их конфигурацию:
 
 **R01.MSK**
+
 ```
 /interface ethernet
 set [ find default-name=ether1 ] disable-running-check=no
@@ -93,6 +104,7 @@ set name=R01.MSK
 ```
 
 **R02.BRL**
+
 ```
 /interface ethernet
 set [ find default-name=ether1 ] disable-running-check=no
@@ -123,6 +135,7 @@ set name=R02.BRL
 ```
 
 **R03.FRT**
+
 ```
 /interface ethernet
 set [ find default-name=ether1 ] disable-running-check=no
@@ -159,17 +172,24 @@ set name=R03.FRT
 4. И для проверки локальной связности сети ниже представлены результаты команды ip route print и пинги для различных устройств:
 
 **R01.MSK**
+
 ![ip route print msk](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/msk_ping.png)
+
 ![ping msk](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/msk_route.png)
 
 **R02.BRL**
+
 ![ip route print brl](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/brl_ping.png)
+
 ![ping brl](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/brl_route.png)
 
 **R03.FRT**
+
 ![ip route print frt](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/frt_ping.png)
+
 ![ping frt](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/frt_route.png)
 
 
 ## Вывод:
+
 В результате выполнения лабораторной работы были освоены методы работы с ContainerLab, была изучены и практически настроены статическая маршрутизация меджу роутерами, DHCP-сервер и др.
