@@ -165,11 +165,15 @@ add distance=1 dst-address=10.10.20.0/24 gateway=20.20.0.2
 set name=R03.FRT
 ```
 
-3. Схема настроенной сети:
+3. Также настроим PC1, PC2, PC3 на получение ip-адреса от dhcp-сервера.
+
+![настройка_пк](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/ip_dhcp_pc.png)
+
+4. Схема настроенной сети:
    
    ![схема_сети](https://github.com/sadnastya/2023_2024-introduction_in_routing-k3321-sadovaya_a_r/blob/main/lab2/images/schema_lab2.png)
    
-4. И для проверки локальной связности сети ниже представлены результаты команды ip route print и пинги для различных устройств:
+5. И для проверки локальной связности сети ниже представлены результаты команды ip route print и пинги для различных устройств:
 
 **R01.MSK**
 
