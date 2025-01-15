@@ -567,11 +567,11 @@ set name=R01.HKI
 
 **From PC2 to PC3 and PC1**
 
-![!ping_pc2](images/part2/ping2.png)
+![ping_pc2](images/part2/ping2.png)
 
 **From PC3 to PC2 and PC1**
 
-![!ping_pc3](images/part2/ping3,png)
+![ping_pc3](images/part2/ping3.png)
 
 ## Вывод:
 
